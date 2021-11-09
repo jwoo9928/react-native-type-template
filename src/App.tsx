@@ -12,10 +12,12 @@
 import TabNavigator from './components/navigator/TabNavigator';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import StackNavigator from './components/navigator/StackNavigator';
  const App = () => {
    return (
        <NavigationContainer>
-         <TabNavigator />
+         {/* <TabNavigator /> */}
+         <StackNavigator/>
        </NavigationContainer>
    );
  };

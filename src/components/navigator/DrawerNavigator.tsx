@@ -1,7 +1,8 @@
 import { DrawerItem, createDrawerNavigator } from '@react-navigation/drawer';
 import React, { ReactElement } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-
+import TabNavigator from './TabNavigator';
+import HomeContainer from '../containers/HomeContainer';
 const Drawer = createDrawerNavigator();
 
 function CustomDrawerContent({navigation} : any): ReactElement {
@@ -39,7 +40,10 @@ function DrawerNavigator(): ReactElement {
         <CustomDrawerContent {...props} />
       )}
     >
-     
+     <Drawer.Screen
+     name='TabNavigator'
+     component={TabNavigator}
+     options={{ drawerLabel: '메인' }}/>
     </Drawer.Navigator>
   );
 }

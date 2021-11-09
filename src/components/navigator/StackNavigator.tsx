@@ -2,14 +2,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
-import Home from '../../screens/home'
 import DrawerNavigator from './DrawerNavigator'
 
 interface MainStackNavigatorProps {}
 
 const Stack = createNativeStackNavigator();
 
-const MainStackNavigator = (props: MainStackNavigatorProps) => {
+const StackNavigator = (props: MainStackNavigatorProps) => {
   return (
     <Stack.Navigator initialRouteName={'HomeContainer'}>
       <Stack.Screen
@@ -23,7 +22,7 @@ const MainStackNavigator = (props: MainStackNavigatorProps) => {
   );
 };
 
-export default MainStackNavigator;
+export default StackNavigator;
 
 const styles = StyleSheet.create({
   container: {},

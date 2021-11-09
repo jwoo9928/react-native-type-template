@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
-
+import StackNavigator from './StackNavigator';
 import Home from '../../screens/home';
 import Temp from '../../screens/temp';
+import HomeContainer from '../containers/HomeContainer';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,8 +29,8 @@ const TabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="지갑"
-        component={Home}
+        name="HomeContainer"
+        component={HomeContainer}
         options={{
           headerShown:false,
           tabBarIcon: ({ focused } : any): ReactElement => 
@@ -45,6 +46,7 @@ const TabNavigator = () => {
             TabBarIcon(focused),
         }}
       />
+
     </Tab.Navigator>
   );
 }
