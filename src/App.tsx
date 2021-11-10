@@ -8,18 +8,30 @@
  * @format
  */
 
- import {NavigationContainer} from '@react-navigation/native';
-import TabNavigator from './components/navigator/TabNavigator';
-import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { useRef } from 'react';
 import StackNavigator from './components/navigator/StackNavigator';
- const App = () => {
-   return (
-       <NavigationContainer>
-         {/* <TabNavigator /> */}
-         <StackNavigator/>
-       </NavigationContainer>
-   );
- };
- 
- export default App;
+import { RecoilRoot, useRecoilTransactionObserver_UNSTABLE } from 'recoil';
+import { textState } from './store/atoms';
+
+const DebugObserver = () => {
+  
+  useRecoilTransactionObserver_UNSTABLE(({snapshot,previousSnapshot}) => {
+    console.log("Previous Snapshot",previousSnapshot.getInfo_UNSTABLE(textState).loadable)
+    console.log("Snapshot updated", snapshot.getInfo_UNSTABLE(textState).loadable);
+  })
+  return null;
+}
+
+const App = () => {
+  return (
+    <RecoilRoot>
+      <DebugObserver />
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
+    </RecoilRoot>
+  );
+};
+
+export default App;
