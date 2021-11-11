@@ -18,13 +18,12 @@ import AppTest from './AppTest';
 const DebugObserver = () => {
 
   useRecoilTransactionObserver_UNSTABLE(({ snapshot, previousSnapshot }) => {
-    console.log("Previous Snapshot", previousSnapshot.getInfo_UNSTABLE(textState).loadable)
-    console.log("Snapshot updated", snapshot.getInfo_UNSTABLE(textState).loadable);
+    snapshot.getPromise(textState).then((result : any)=>{console.log("snapshot updated value",result)})
   })
   return null;
 }
 
-const AppMain = ({ forceLogin }: any) => {
+const AppMain = ({ forceLogin } : {forceLogin : boolean}) => {
   return (
     <NavigationContainer>
       <StackNavigator />

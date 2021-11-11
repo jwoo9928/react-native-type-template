@@ -12,6 +12,7 @@ const Temp = ({ navigation }: any) => {
             contentMode="mobile"
             textZoom={200}
             showsVerticalScrollIndicator={false}
+            cacheEnabled={false}
         />
     );
 };
