@@ -1,4 +1,4 @@
-import { PersistStorage, recoilPersist } from 'recoil-persist';
+//import { PersistStorage, recoilPersist } from 'recoil-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom, selector } from 'recoil';
 
@@ -24,15 +24,12 @@ export const charCountState = selector({
 
 // const saveAppData = async () => {
 //     try {
-  
 //       const newValue = {
 //        textState: textState
 //       }
-
 //       const jsonValue = JSON.stringify(newValue);
 //       await AsyncStorage.mergeItem('appInfo', jsonValue);
 //     } catch (e) {
 //       console.log('saveLocalData error:', e);
 //     }
 //   };
-  
