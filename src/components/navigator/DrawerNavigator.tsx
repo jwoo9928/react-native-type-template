@@ -2,7 +2,6 @@ import { DrawerItem, createDrawerNavigator } from '@react-navigation/drawer';
 import React, { ReactElement } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import TabNavigator from './TabNavigator';
-import HomeContainer from '../containers/HomeContainer';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const Drawer = createDrawerNavigator();
 
@@ -41,18 +40,18 @@ function DrawerNavigator(): ReactElement {
     <Drawer.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle:{
-          backgroundColor:"#00ff0000"
+        headerStyle: {
+          backgroundColor: "#00ff0000"
         }
       }}
       drawerContent={(props): ReactElement => (
         <CustomDrawerContent {...props} />
       )}
     >
-     <Drawer.Screen
-     name='지갑'
-     component={TabNavigator}
-     options={{ drawerLabel: '메인' }}/>
+      <Drawer.Screen
+        name='지갑'
+        component={TabNavigator}
+        options={{ drawerLabel: '메인' }} />
     </Drawer.Navigator>
   );
 }
