@@ -12,6 +12,8 @@ target 'bifrost_wallet_mobile' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'bifrost_wallet_mobileTests' do
     inherit! :complete
     # Pods for testing
