@@ -3,7 +3,7 @@ import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Test from '../../screens/test';
 import BiFiServiceContainer from '../containers/BiFiServiceContainer';
-import SendContainer from '../containers/sendContainer';
+import SendContainer from '../containers/SendContainer';
 import TokenContainer from '../containers/TokenContainer';
 
 import DrawerNavigator from './DrawerNavigator'

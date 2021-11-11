@@ -51,7 +51,13 @@ function DrawerNavigator(): ReactElement {
       <Drawer.Screen
         name='지갑'
         component={TabNavigator}
-        options={{ drawerLabel: '메인' }} />
+        options={{
+          drawerLabel: '메인',
+          headerStyle: {
+            height:70
+          }
+        }}
+      />
     </Drawer.Navigator>
   );
 }

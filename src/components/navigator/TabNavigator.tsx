@@ -38,7 +38,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="temp"
+        name="(beta)"
         component={Temp}
         options={{
           headerShown:false,
