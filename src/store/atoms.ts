@@ -2,10 +2,10 @@ import { PersistStorage, recoilPersist } from 'recoil-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom, selector } from 'recoil';
 
-const { persistAtom } = recoilPersist({
-    key: 'recoil-persist',
-    storage: AsyncStorage as PersistStorage
-})
+// const { persistAtom } = recoilPersist({
+//     key: 'recoil-persist',
+//     storage: AsyncStorage as PersistStorage
+// })
 
 export const textState = atom<string>({
     key:'textState', // unique ID
