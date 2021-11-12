@@ -1006,7 +1006,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@react-native-async-storage/async-storage@^1.15.11":
+"@react-native-async-storage/async-storage@^1.15.0", "@react-native-async-storage/async-storage@^1.15.11":
   version "1.15.11"
   resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.15.11.tgz#da625b906529076414c32fd337d813b565149858"
   integrity sha512-l/I+PK+lh5M25QSdk44aX+UR63ian2d2CSx6WbydwU+RUZmKP7eOEPe+OeaTWgfOFSVtlEqEcP2AbW2YM7ukMA==
@@ -5675,6 +5675,13 @@ recast@^0.20.3:
     esprima "~4.0.0"
     source-map "~0.6.1"
     tslib "^2.0.1"
+
+recoil-persistence@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/recoil-persistence/-/recoil-persistence-0.2.6.tgz#58ed04b3ac17d6f329cafebaf821c2b21bca4fe7"
+  integrity sha512-kYMr/pFNflzaOIwHdQ7NAWNvmfUjFCCEuHSaC9Z6hg5NVzZMnJHZSQ+F1QBdOa4rA1xz80jyw9QTCABunpJUbw==
+  optionalDependencies:
+    "@react-native-async-storage/async-storage" "^1.15.0"
 
 recoil@^0.5.2:
   version "0.5.2"
