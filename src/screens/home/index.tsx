@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Text, View, StyleSheet, FlatList, Pressable } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,7 +9,23 @@ import ReactNativeBiometrics from 'react-native-biometrics'
 const Home = ({ navigation }: any) => {
     const [text, setText] = useRecoilState(textState); //전역 상태관리
     // const [text,setText] = useState(''); ..????    //로컬 상태 관리
-    const { biometryType } : any = ReactNativeBiometrics.isSensorAvailable();
+    const { biometryType }: any = ReactNativeBiometrics.isSensorAvailable();
+    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const TestView = () => {
+        return (
+            <FlatList
+                data={testArray}
+                keyExtractor={item => item.toString()}
+                renderItem={({ item }) => {
+                    return <Text>
+                        {item}
+                    </Text>
+                }}
+            >
+            </FlatList>
+        )
+    }
 
     const length = useRecoilValue(charCountState);
     return (
@@ -57,6 +73,7 @@ const Home = ({ navigation }: any) => {
                     <Text>pressable</Text>
                 </Pressable>
             </View>
+            <TestView/>
         </SafeAreaView>
     );
 };

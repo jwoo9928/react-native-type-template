@@ -7,12 +7,19 @@ import { atom, selector } from 'recoil';
 //     storage: AsyncStorage as PersistStorage
 // })
 
+//recoil 셋팅
 export const textState = atom<string>({
     key:'textState', // unique ID
     default: '', //default value
     //effects_UNSTABLE: [persistAtom],
 })
 
+export const countState = atom<Number>({
+    key:"countState",
+    default : 0
+})
+
+//selector 셋팅
 export const charCountState = selector({
     key: 'charCountState',
     get: ({ get }) => {
@@ -20,6 +27,14 @@ export const charCountState = selector({
         const text = get(textState);
         return text.length;
     },
+})
+
+
+export const countInputState = selector({
+    key :'countInputState',
+    get : ({get}) => {
+        return `current count is ${get(countState)}`
+    }
 })
 
 // const saveAppData = async () => {

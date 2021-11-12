@@ -15,6 +15,7 @@ import { RecoilRoot, useRecoilTransactionObserver_UNSTABLE } from 'recoil';
 import { textState } from './store/atoms';
 import AppTest from './AppTest';
 
+
 const DebugObserver = () => {
 
   useRecoilTransactionObserver_UNSTABLE(({ snapshot, previousSnapshot }) => {
