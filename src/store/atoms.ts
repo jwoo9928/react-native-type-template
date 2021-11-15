@@ -5,7 +5,7 @@ import { persistentAtom } from 'recoil-persistence/react-native'
 
 interface localForageEffectProps {
     setSelf : Function,
-    onSet : Function
+    onSet : Function,
 }
 
 const localForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffectProps) => {
@@ -26,6 +26,7 @@ const localForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffec
         }
     });
 };
+
 //recoil 셋팅
 export const textState = atom<string>({
     key: 'textState', // unique ID

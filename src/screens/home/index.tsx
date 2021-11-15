@@ -10,6 +10,7 @@ import Toast from 'react-native-simple-toast';
 
 const Home = ({ navigation }: any) => {
     const [text, setText] = useRecoilState(textState); //전역 상태관리
+    const testText  = useRecoilValue(textState);
     const { biometryType }: any = ReactNativeBiometrics.isSensorAvailable();
     const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
