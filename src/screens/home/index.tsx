@@ -7,6 +7,7 @@ import { charCountState, textState } from '../../store/atoms';
 import ReactNativeBiometrics from 'react-native-biometrics'
 import Clipboard from '@react-native-clipboard/clipboard';
 import Toast from 'react-native-simple-toast';
+import * as bip39 from 'bip39'
 
 const Home = ({ navigation }: any) => {
     const [text, setText] = useRecoilState(textState); //전역 상태관리
@@ -16,18 +17,14 @@ const Home = ({ navigation }: any) => {
     const [copiedText, setCopiedText] = useState('');
 
     const copyToClipboard = () => {
-        Clipboard.setString('hello world');
+        Clipboard.setString(copiedText);
         Toast.show("클립보드에 복사되었습니다.");
     };
 
-    const fetchCopiedText = async () => {
-        const text = await Clipboard.getString();
-        setCopiedText(text);
-    };
-
-    useEffect(()=> {
-        fetchCopiedText();
-    },[copiedText])
+    const generateMnemonic = () => {
+        const seed = bip39.generateMnemonic();
+        setCopiedText(seed);
+    }
 
     useEffect(()=> {
         console.log("render test, It show only once.")
@@ -100,7 +97,15 @@ const Home = ({ navigation }: any) => {
                 >
                     <Text>클립보드 복사</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={generateMnemonic}
+                >
+                    <Text>니모닉 생성</Text>
+                </TouchableOpacity>
                 </View>
+                <Text>
+                    {copiedText}
+                </Text>
             <TestView/>
         </SafeAreaView>
     );
