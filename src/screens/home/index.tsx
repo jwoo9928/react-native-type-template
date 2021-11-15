@@ -1,16 +1,34 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Text, View, StyleSheet, FlatList, Pressable } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { charCountState, textState } from '../../store/atoms';
 import ReactNativeBiometrics from 'react-native-biometrics'
+import Clipboard from '@react-native-clipboard/clipboard';
+import Toast from 'react-native-simple-toast';
 
 const Home = ({ navigation }: any) => {
     const [text, setText] = useRecoilState(textState); //전역 상태관리
-    // const [text,setText] = useState(''); ..????    //로컬 상태 관리
     const { biometryType }: any = ReactNativeBiometrics.isSensorAvailable();
     const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const [copiedText, setCopiedText] = useState('');
+
+    const copyToClipboard = () => {
+        Clipboard.setString('hello world');
+        Toast.show("클립보드에 복사되었습니다.")
+    };
+
+    const fetchCopiedText = async () => {
+        const text = await Clipboard.getString();
+        setCopiedText(text);
+    };
+
+    useEffect(()=> {
+        fetchCopiedText();
+    },[copiedText])
+
 
     const TestView = () => {
         return (
@@ -73,6 +91,13 @@ const Home = ({ navigation }: any) => {
                     <Text>pressable</Text>
                 </Pressable>
             </View>
+            <View>
+                <TouchableOpacity
+                    onPress={copyToClipboard}
+                >
+                    <Text>클립보드 복사</Text>
+                </TouchableOpacity>
+                </View>
             <TestView/>
         </SafeAreaView>
     );

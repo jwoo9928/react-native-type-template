@@ -276,6 +276,9 @@ PODS:
     - React
   - react-native-safe-area-context (3.3.2):
     - React-Core
+  - react-native-simple-toast (1.1.3):
+    - React-Core
+    - Toast (~> 4.0.0)
   - react-native-webview (11.14.2):
     - React-Core
   - React-perflogger (0.66.2)
@@ -345,6 +348,8 @@ PODS:
     - React-perflogger (= 0.66.2)
   - RNCAsyncStorage (1.15.11):
     - React-Core
+  - RNCClipboard (1.9.0):
+    - React-Core
   - RNCMaskedView (0.1.11):
     - React
   - RNGestureHandler (1.10.3):
@@ -381,6 +386,7 @@ PODS:
   - RNScreens (3.9.0):
     - React-Core
     - React-RCTImage
+  - Toast (4.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -428,6 +434,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-biometrics (from `../node_modules/react-native-biometrics`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-simple-toast (from `../node_modules/react-native-simple-toast`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -442,6 +449,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - "RNCClipboard (from `../node_modules/@react-native-clipboard/clipboard`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
@@ -463,6 +471,7 @@ SPEC REPOS:
     - fmt
     - libevent
     - OpenSSL-Universal
+    - Toast
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -504,6 +513,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-biometrics"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-simple-toast:
+    :path: "../node_modules/react-native-simple-toast"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-perflogger:
@@ -532,6 +543,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNCClipboard:
+    :path: "../node_modules/@react-native-clipboard/clipboard"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
@@ -576,6 +589,7 @@ SPEC CHECKSUMS:
   React-logger: faee236598b0f7e1a5e3b68577016ac451f1f993
   react-native-biometrics: 9d3306e5d29c3bc4e6a3c912d759a94e76a2f683
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
+  react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-webview: cc4ac8f021a832dce2979e1f48c5595341dd2fb5
   React-perflogger: 5ab487cacfe6ec19bfe3d3f8072bf71eb07d63da
   React-RCTActionSheet: 03f25695e095fb5aa003828620943c74cc281fec
@@ -590,10 +604,12 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 393e26602c1b248683372051e34db63e359e3b01
   ReactCommon: c0263c1a41509aeb94be3214fa7bc3b71eae5ef6
   RNCAsyncStorage: eb05c0284dd6b50b32f92fad55e2a41e03358c43
+  RNCClipboard: 99fc8ad669a376b756fbc8098ae2fd05c0ed0668
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: 65583befd5706cc9c86ae9a081786181ced37b93
   RNScreens: 4d79118be80f79fa1f4aa131909a1d6e86280af3
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: 9a08effa851c1d8cc1647691895540bc168ea65f
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
