@@ -13,12 +13,11 @@ const Home = ({ navigation }: any) => {
     const testText  = useRecoilValue(textState);
     const { biometryType }: any = ReactNativeBiometrics.isSensorAvailable();
     const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
     const [copiedText, setCopiedText] = useState('');
 
     const copyToClipboard = () => {
         Clipboard.setString('hello world');
-        Toast.show("클립보드에 복사되었습니다.")
+        Toast.show("클립보드에 복사되었습니다.");
     };
 
     const fetchCopiedText = async () => {
@@ -30,6 +29,9 @@ const Home = ({ navigation }: any) => {
         fetchCopiedText();
     },[copiedText])
 
+    useEffect(()=> {
+        console.log("render test, It show only once.")
+    },[])
 
     const TestView = () => {
         return (

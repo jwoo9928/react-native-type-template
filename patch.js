@@ -1,6 +1,5 @@
 (
     function b() {
-        //for android
         let shell = require('shelljs');
 
         //mac
