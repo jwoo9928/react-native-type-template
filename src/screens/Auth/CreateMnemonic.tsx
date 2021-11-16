@@ -6,9 +6,9 @@ import * as bip39 from 'bip39'
 import * as bip32 from 'bip32';
 import { payments, networks, Network } from 'bitcoinjs-lib';
 import { useRecoilState } from 'recoil';
-import { walletState } from '../../store/atoms';
+import { countState, walletState } from '../../store/atoms';
 import { wallet } from '../../type'
-import { randomInt } from 'crypto';
+import ethUtil ,{pubToAddress,toChecksumAddress,addHexPrefix}from 'ethereumjs-util';
 import config from '../../config';
 type p2wpkhParams = {
     pubkey: Buffer;
@@ -19,6 +19,7 @@ type p2wpkhParams = {
 const CreateMnemonic = ({ navigation }: any) => {
     const [copiedText, setCopiedText] = useState('');
     const [wallets, addWallets] = useRecoilState(walletState);
+    const [count,setCount] = useRecoilState(countState);
     const test = Array.from(wallets);
 
     const copyToClipboard = () => {
@@ -42,16 +43,45 @@ const CreateMnemonic = ({ navigation }: any) => {
         };
         params.network = networks.testnet;
         const address = payments.p2wpkh(params).address?.toString();
+        // const wallet: wallet = {
+        //     name: "이더리움",
+        //     coinType: 'eth',
+        //     symbol: "eth",
+        //     address: address
+        // }
+    //     console.log("wallets : ", wallets);
+    //     addWallets(new Set([
+    //         ...test,
+    //         wallet
+    //     ]))
+    }
+
+    const createWalletTest = () => {
+        const seed = bip39.mnemonicToSeedSync(copiedText);
+        // 마스터 키 생성
+        const root = bip32.fromSeed(seed);
+        // 이더리움 차일드 개인키 생성
+        const xPrivKey = root.derivePath("m/44'/60'/0'/0/0");
+        const privKey = xPrivKey?.privateKey?.toString('hex');
+        // 이더리움 주소 생성
+        let address = pubToAddress(xPrivKey.publicKey, true).toString('hex')
+        // 이더리움 EIP-55 체크섬 주소로 변환
+        address = toChecksumAddress(addHexPrefix(address))
+        console.log("address : ", address)
         const wallet: wallet = {
             name: "이더리움",
             coinType: 'eth',
             symbol: "eth",
-            address: address
+            address: address,
+            balance:''
         }
         console.log("wallets : ", wallets);
         addWallets(new Set([
             ...test,
-            wallet
+            {
+                wallet : wallet,
+                privKey : privKey
+            }
         ]))
     }
 
@@ -76,7 +106,8 @@ const CreateMnemonic = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={()=>{
-                    createWallet();
+                    createWalletTest();
+                    setCount(count);
                     navigation.goBack();
                 }}
                 style={styles.temp}

@@ -38,17 +38,20 @@ export const textState = atom<string>({
 
 })
 
-export const countState = atom<Number>({
+export const countState = atom<number>({
     key: "countState",
     default: 0,
+    effects_UNSTABLE: [
+        localForageEffect('count state')
+    ]
 
 })
 
-export const walletState = atom<Set<wallet>>({
+export const walletState = atom<Set<any>>({
     key:'walletState',
-    default :new Set(),
+    default : new Set<any>(),
     effects_UNSTABLE: [
-        localForageEffect('wallet-state')
+        localForageEffect('wallets state')
     ]
 })
 

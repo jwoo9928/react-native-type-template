@@ -12,7 +12,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, { useRef, useState } from 'react';
 import StackNavigator from './components/navigator/StackNavigator';
 import { RecoilRoot, useRecoilTransactionObserver_UNSTABLE } from 'recoil';
-import { textState } from './store/atoms';
+import { textState, walletState } from './store/atoms';
 import AppTest from './AppTest';
 
 
@@ -20,6 +20,7 @@ const DebugObserver = () => {
 
   useRecoilTransactionObserver_UNSTABLE(({ snapshot, previousSnapshot }) => {
     snapshot.getPromise(textState).then((result : any)=>{console.log("snapshot updated value",result)})
+    snapshot.getPromise(walletState).then((result)=>console.log("wallet : ",result));
   })
   return null;
 }

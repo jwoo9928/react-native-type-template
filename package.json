@@ -20,6 +20,8 @@
     "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "bip32": "2.0.6",
     "bip39": "^3.0.4",
     "bitcoinjs-lib": "^6.0.0",
@@ -28,6 +30,7 @@
     "ethers": "^5.5.1",
     "events": "^3.3.0",
     "jetifier": "^2.0.0",
+    "node-libs-browser": "^2.2.1",
     "process": "^0.11.10",
     "react": "17.0.2",
     "react-native": "0.66.2",
@@ -48,7 +51,8 @@
     "stream": "^0.0.2",
     "stream-browserify": "^1.0.0",
     "vm": "^0.1.0",
-    "vm-browserify": "0.0.4"
+    "vm-browserify": "0.0.4",
+    "web3": "1.0.0-beta.24"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
