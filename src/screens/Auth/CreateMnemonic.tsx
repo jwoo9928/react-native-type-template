@@ -7,7 +7,9 @@ import * as bip32 from 'bip32';
 import { payments, networks, Network } from 'bitcoinjs-lib';
 import { useRecoilState } from 'recoil';
 import { walletState } from '../../store/atoms';
-import {wallet} from '../../type'
+import { wallet } from '../../type'
+import { randomInt } from 'crypto';
+import config from '../../config';
 type p2wpkhParams = {
     pubkey: Buffer;
     network?: Network;
@@ -16,7 +18,8 @@ type p2wpkhParams = {
 
 const CreateMnemonic = ({ navigation }: any) => {
     const [copiedText, setCopiedText] = useState('');
-    const [wallets,addWallets] = useRecoilState(walletState);
+    const [wallets, addWallets] = useRecoilState(walletState);
+    const test = Array.from(wallets);
 
     const copyToClipboard = () => {
         Clipboard.setString(copiedText);
@@ -39,55 +42,48 @@ const CreateMnemonic = ({ navigation }: any) => {
         };
         params.network = networks.testnet;
         const address = payments.p2wpkh(params).address?.toString();
-        const wallet : wallet = {
-            name : "이더리움",
-            coinType : 'eth',
-            symbol:"eth",
-            address : address
+        const wallet: wallet = {
+            name: "이더리움",
+            coinType: 'eth',
+            symbol: "eth",
+            address: address
         }
-        wallets.add(wallet);
-        addWallets(wallets)
-        
-
+        console.log("wallets : ", wallets);
+        addWallets(new Set([
+            ...test,
+            wallet
+        ]))
     }
 
     return (
-        <View>
-            <View style={{ alignItems: 'center' }}>
-                <Text
-                    style={[{ height: 70, width: 200, borderWidth: 1 }, styles.temp]}
-                >
-                    {copiedText}
-                </Text>
-                <TouchableOpacity
-                    onPress={generateMnemonic}
-                    style={styles.temp}
-                >
-                    <Text>니모닉 생성</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={copyToClipboard}
-                    style={styles.temp}
-                >
-                    <Text>클립보드 복사</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={createWallet}
-                    style={styles.temp}
-                >
-                    <Text>지갑 생성</Text>
-                </TouchableOpacity>
-                <FlatList
-                data={Array.from(wallets)}
-                keyExtractor={item => item.name}
-                renderItem={({ item }) => {
-                    return <Text>
-                        {item.address}
-                    </Text>
-                }}
+        <View style={{ alignItems: 'center' }}>
+            <Text
+                style={[styles.nmemonic]}
             >
-            </FlatList>
-            </View>
+                {copiedText}
+            </Text>
+            <TouchableOpacity
+                onPress={generateMnemonic}
+                style={styles.temp}
+            >
+                <Text>니모닉 생성</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={copyToClipboard}
+                style={styles.temp}
+            >
+                <Text>클립보드 복사</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={()=>{
+                    createWallet();
+                    navigation.goBack();
+                }}
+                style={styles.temp}
+                disabled={copiedText==''}
+            >
+                <Text>지갑 생성</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -96,6 +92,17 @@ export default CreateMnemonic;
 
 const styles = StyleSheet.create({
     temp: {
-        marginVertical: 20
+        marginVertical: 20,
+        borderWidth:1,
+        borderRadius:30,
+        width:config.WINDOW_WIDTH-300,
+        height:30,
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    nmemonic : {
+        height: 90, width: config.WINDOW_WIDTH-32, borderWidth: 1,
+        borderColor:'gray',
+        marginTop:60
     }
 })
