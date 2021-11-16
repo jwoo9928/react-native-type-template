@@ -80,15 +80,9 @@ const Home = ({ navigation }: any) => {
                     style={({pressed})=> [
                         {backgroundColor: pressed ? "blue": "red",marginRight:20}
                     ]}
+                    onPress={()=>navigation.navigate('Auth')}
                 >
-                    <Text>pressable</Text>
-                </Pressable>
-                <Pressable
-                    style={({pressed})=> [
-                        {width: pressed ? 100 : 80, backgroundColor:"red",}
-                    ]}
-                >
-                    <Text>pressable</Text>
+                    <Text>가입테스트</Text>
                 </Pressable>
             </View>
             <View>
@@ -103,9 +97,7 @@ const Home = ({ navigation }: any) => {
                     <Text>니모닉 생성</Text>
                 </TouchableOpacity>
                 </View>
-                <Text>
-                    {copiedText}
-                </Text>
+             
             <TestView/>
         </SafeAreaView>
     );

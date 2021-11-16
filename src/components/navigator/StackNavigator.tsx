@@ -2,6 +2,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Test from '../../screens/test';
+import AuthContainer from '../containers/AuthContainer';
 import BiFiServiceContainer from '../containers/BiFiServiceContainer';
 import SendContainer from '../containers/SendContainer';
 import TokenContainer from '../containers/TokenContainer';
@@ -46,6 +47,13 @@ const StackNavigator = (props: MainStackNavigatorProps) => {
       <Stack.Screen
         name="Token"
         component={TokenContainer}
+        options={{
+          headerShown:false
+        }}
+      />
+      <Stack.Screen
+        name="Auth"
+        component={AuthContainer}
         options={{
           headerShown:false
         }}

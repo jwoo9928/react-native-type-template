@@ -2,6 +2,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom, DefaultValue, selector } from 'recoil';
 import { persistentAtom } from 'recoil-persistence/react-native'
+import { wallet } from '../type';
 
 interface localForageEffectProps {
     setSelf : Function,
@@ -43,6 +44,14 @@ export const countState = atom<Number>({
 
 })
 
+export const walletState = atom<Set<wallet>>({
+    key:'walletState',
+    default :new Set(),
+    effects_UNSTABLE: [
+        localForageEffect('wallet-state')
+    ]
+})
+
 //selector 셋팅
 export const charCountState = selector({
     key: 'charCountState',
@@ -60,15 +69,3 @@ export const countInputState = selector({
         return `current count is ${get(countState)}`
     }
 })
-
-// const saveAppData = async () => {
-//     try {
-//       const newValue = {
-//        textState: textState
-//       }
-//       const jsonValue = JSON.stringify(newValue);
-//       await AsyncStorage.mergeItem('appInfo', jsonValue);
-//     } catch (e) {
-//       console.log('saveLocalData error:', e);
-//     }
-//   };
