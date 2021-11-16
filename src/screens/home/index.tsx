@@ -15,6 +15,8 @@ const Home = ({ navigation }: any) => {
     const wallets = useRecoilValue(walletState);
     const walletCount = useRecoilValue(countState);
 
+`https://ropsten.etherscan.io/api?module=account&action=txlist&address=0x20c6efa8EE63C9C45a1A40c040d7228e3f44fd4d`
+
 
     return (
         <SafeAreaView style={styles.container}>
@@ -52,7 +54,10 @@ const Home = ({ navigation }: any) => {
                             //     console.log("price : ",etherString);
                             // })
                             return (
-                                <View style={styles.walletInfo}>
+                                <TouchableOpacity
+                                    style={styles.walletInfo}
+                                    onPress={()=>navigation.navigate("Wallet")}
+                                >
                                     <Text>
                                         {wallet.symbol}
                                     </Text>
@@ -65,7 +70,7 @@ const Home = ({ navigation }: any) => {
                                     <Text>
                                         {wallet.balance}
                                     </Text>
-                                </View>
+                                </TouchableOpacity>
                             )
                         }}
                     >

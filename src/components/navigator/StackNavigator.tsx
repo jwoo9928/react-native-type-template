@@ -6,8 +6,8 @@ import AuthContainer from '../containers/AuthContainer';
 import BiFiServiceContainer from '../containers/BiFiServiceContainer';
 import SendContainer from '../containers/SendContainer';
 import TokenContainer from '../containers/TokenContainer';
-
 import DrawerNavigator from './DrawerNavigator'
+import Wallet from '../../screens/Wallet'
 
 interface MainStackNavigatorProps {}
 
@@ -54,6 +54,13 @@ const StackNavigator = (props: MainStackNavigatorProps) => {
       <Stack.Screen
         name="Auth"
         component={AuthContainer}
+        options={{
+          headerShown:false
+        }}
+      />
+      <Stack.Screen
+        name="Wallet"
+        component={Wallet}
         options={{
           headerShown:false
         }}
