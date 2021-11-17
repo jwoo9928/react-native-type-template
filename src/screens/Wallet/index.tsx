@@ -2,21 +2,23 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Text, View, StyleSheet, FlatList, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { wallet } from '../../type';
+import Deposit from './Deposit';
 import WalletInfo from './WalletInfo';
 
 interface AuthProps {
     navigation : any,
-    address : string,
-    wallet : wallet
+    route : any
 }
 
-const Auth = ({ navigation, address,wallet }: AuthProps) => {
+const Auth = ({ navigation,route}: AuthProps) => {
 
-    const [page,SetPage] = useState<Number>(0)    
+    const [page,setPage] = useState<number>(0)    
+    const wallet = route.params.wallet;
 
-    const pageSetup = (page : Number) => {
+    const pageSetup = (page : number) => {
         switch(page) {
-            case 0 : return <WalletInfo address={address} wallet={wallet} />
+            case 0 : return <WalletInfo wallet={wallet} page={page} setPage={setPage}/>
+            case 1 : return <Deposit address={wallet.address} page={page} setPage={setPage}/>
         }
     }
 

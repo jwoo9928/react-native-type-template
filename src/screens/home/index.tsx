@@ -43,28 +43,24 @@ const Home = ({ navigation }: any) => {
                 </View>
                 <Text>{}</Text>
                 {
-                    wallets.size > 0 &&
+                    wallets.length > 0 &&
                     <FlatList
-                        data={Array.from(wallets)}
+                        data={wallets}
                         renderItem={({ item }: { item: any }) => {
-                            const wallet = item.wallet;
-                            // const provider = ethers.getDefaultProvider('ropsten');
-                            // provider.getBalance(wallet.address).then(balance => {
-                            //     const etherString = ethers.utils.formatEther(balance);
-                            //     console.log("price : ",etherString);
-                            // })
+                            const wallet = item.wallet
+                         
                             return (
                                 <TouchableOpacity
                                     style={styles.walletInfo}
-                                    onPress={()=>navigation.navigate("Wallet")}
+                                    onPress={()=>navigation.navigate("Wallet",{wallet : wallet})}
                                 >
-                                    <Text>
+                                    <Text style={{fontSize:20}}>
                                         {wallet.symbol}
                                     </Text>
-                                    <Text>
+                                    <Text style={{color:'gray'}}>
                                         {wallet.name}
                                     </Text>
-                                    <Text>
+                                    <Text style={{fontSize:12,paddingTop:12,alignSelf:'center'}}>
                                         {wallet.address}
                                     </Text>
                                     <Text>
@@ -96,6 +92,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         justifyContent: 'space-between',
         alignItems: 'center',
+        backgroundColor:"#FFFFFF"
     },
     touchable: {
         width: 50,
@@ -124,6 +121,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#3A86F6',
         paddingHorizontal: 16,
-        marginVertical: 10
+        marginVertical: 10,
+        paddingVertical:5
     }
 })

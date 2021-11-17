@@ -12,18 +12,18 @@ interface localForageEffectProps {
 const localForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffectProps) => {
     const loadPersisted = async () => {
         const savedValue = await AsyncStorage.getItem(key);
-
         if (savedValue != null) {
             setSelf(JSON.parse(savedValue));
         }
     };
     loadPersisted();
 
-    onSet((newValue: any) => {
+    onSet(async(newValue: any) => {
         if (newValue instanceof DefaultValue) {
             AsyncStorage.removeItem(key);
         } else {
             AsyncStorage.setItem(key, JSON.stringify(newValue));
+            //console.log(`${key} saved Data ${JSON.stringify(newValue)} : ${await AsyncStorage.getItem(key)}`)
         }
     });
 };
@@ -47,9 +47,9 @@ export const countState = atom<number>({
 
 })
 
-export const walletState = atom<Set<any>>({
+export const walletState = atom<Array<object>>({
     key:'walletState',
-    default : new Set<any>(),
+    default : new Array<object>(),
     effects_UNSTABLE: [
         localForageEffect('wallets state')
     ]
