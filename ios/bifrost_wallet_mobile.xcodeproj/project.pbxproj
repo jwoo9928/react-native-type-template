@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* bifrost_wallet_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* bifrost_wallet_mobileTests.m */; };
-		0D3311393B319A0D8BCA0CF4 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6439DC89B539433D152E40E5 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		80C3D7A3A834D0837A184032 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181D77AD9DAC4D075054984 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8EDEF200A721F3E8A24CA227 /* libPods-bifrost_wallet_mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DF6AB4F47A9F514FB6FD81 /* libPods-bifrost_wallet_mobile.a */; };
+		B5DD7F946F217FFDC7616EAC /* libPods-bifrost_wallet_mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7150F99C6C64566BC6912CCF /* libPods-bifrost_wallet_mobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* bifrost_wallet_mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bifrost_wallet_mobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* bifrost_wallet_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bifrost_wallet_mobileTests.m; sourceTree = "<group>"; };
+		0115FF37C9871EF435A9BBEE /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		08D9B3A13799EE556C0B90C0 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1181D77AD9DAC4D075054984 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* bifrost_wallet_mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bifrost_wallet_mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = bifrost_wallet_mobile/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = bifrost_wallet_mobile/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = bifrost_wallet_mobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = bifrost_wallet_mobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = bifrost_wallet_mobile/main.m; sourceTree = "<group>"; };
-		56274DBAA0D5A20C478677EE /* Pods-bifrost_wallet_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile.release.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile.release.xcconfig"; sourceTree = "<group>"; };
-		6439DC89B539433D152E40E5 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		738460646C275BDD0CD00B98 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2AC15859CEEE0CE1ABBD30 /* Pods-bifrost_wallet_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile.debug.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		7150F99C6C64566BC6912CCF /* libPods-bifrost_wallet_mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bifrost_wallet_mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = bifrost_wallet_mobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8CA56FA7196CCA53ABC2758A /* Pods-bifrost_wallet_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile.debug.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile.debug.xcconfig"; sourceTree = "<group>"; };
-		C4DF6AB4F47A9F514FB6FD81 /* libPods-bifrost_wallet_mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bifrost_wallet_mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC583735AE410BACF7FCA606 /* Pods-bifrost_wallet_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile.release.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3F510F90D99A544FEA42692 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig"; path = "Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D3311393B319A0D8BCA0CF4 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a in Frameworks */,
+				80C3D7A3A834D0837A184032 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EDEF200A721F3E8A24CA227 /* libPods-bifrost_wallet_mobile.a in Frameworks */,
+				B5DD7F946F217FFDC7616EAC /* libPods-bifrost_wallet_mobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				C4DF6AB4F47A9F514FB6FD81 /* libPods-bifrost_wallet_mobile.a */,
-				6439DC89B539433D152E40E5 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */,
+				7150F99C6C64566BC6912CCF /* libPods-bifrost_wallet_mobile.a */,
+				1181D77AD9DAC4D075054984 /* libPods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 		7CB85A21A4C905150A0027A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CA56FA7196CCA53ABC2758A /* Pods-bifrost_wallet_mobile.debug.xcconfig */,
-				56274DBAA0D5A20C478677EE /* Pods-bifrost_wallet_mobile.release.xcconfig */,
-				738460646C275BDD0CD00B98 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */,
-				F3F510F90D99A544FEA42692 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */,
+				5B2AC15859CEEE0CE1ABBD30 /* Pods-bifrost_wallet_mobile.debug.xcconfig */,
+				BC583735AE410BACF7FCA606 /* Pods-bifrost_wallet_mobile.release.xcconfig */,
+				08D9B3A13799EE556C0B90C0 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */,
+				0115FF37C9871EF435A9BBEE /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "bifrost_wallet_mobileTests" */;
 			buildPhases = (
-				C9E275CBEDC95958B515699B /* [CP] Check Pods Manifest.lock */,
+				822B3CBE34730271E7E0EB36 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				5584E061DF0B947745532F48 /* [CP] Embed Pods Frameworks */,
-				50C2283B0529E461E99FC3A4 /* [CP] Copy Pods Resources */,
+				A4D7820942141C1B624EA559 /* [CP] Embed Pods Frameworks */,
+				7C3BC323A144F5EE8D713F19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "bifrost_wallet_mobile" */;
 			buildPhases = (
-				4A907E48AFBD1D156EF09C46 /* [CP] Check Pods Manifest.lock */,
+				4146585749BD13C401E4F3A9 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				4B7D0105E890A0C58130361C /* [CP] Embed Pods Frameworks */,
-				1A73B480938D4B3EC5F2DD57 /* [CP] Copy Pods Resources */,
+				7A658C8AED1FF14B409194C4 /* [CP] Embed Pods Frameworks */,
+				A94DA5D91458CF9DDE7D8D41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,24 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1A73B480938D4B3EC5F2DD57 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A907E48AFBD1D156EF09C46 /* [CP] Check Pods Manifest.lock */ = {
+		4146585749BD13C401E4F3A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +286,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B7D0105E890A0C58130361C /* [CP] Embed Pods Frameworks */ = {
+		7A658C8AED1FF14B409194C4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +303,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		50C2283B0529E461E99FC3A4 /* [CP] Copy Pods Resources */ = {
+		7C3BC323A144F5EE8D713F19 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,24 +320,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5584E061DF0B947745532F48 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9E275CBEDC95958B515699B /* [CP] Check Pods Manifest.lock */ = {
+		822B3CBE34730271E7E0EB36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,6 +340,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D7820942141C1B624EA559 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests/Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A94DA5D91458CF9DDE7D8D41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bifrost_wallet_mobile/Pods-bifrost_wallet_mobile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 738460646C275BDD0CD00B98 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */;
+			baseConfigurationReference = 08D9B3A13799EE556C0B90C0 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3F510F90D99A544FEA42692 /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */;
+			baseConfigurationReference = 0115FF37C9871EF435A9BBEE /* Pods-bifrost_wallet_mobile-bifrost_wallet_mobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CA56FA7196CCA53ABC2758A /* Pods-bifrost_wallet_mobile.debug.xcconfig */;
+			baseConfigurationReference = 5B2AC15859CEEE0CE1ABBD30 /* Pods-bifrost_wallet_mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -505,7 +505,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56274DBAA0D5A20C478677EE /* Pods-bifrost_wallet_mobile.release.xcconfig */;
+			baseConfigurationReference = BC583735AE410BACF7FCA606 /* Pods-bifrost_wallet_mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
