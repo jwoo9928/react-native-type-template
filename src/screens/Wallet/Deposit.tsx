@@ -24,6 +24,7 @@ export default Deposit;
 const styles = StyleSheet.create({
     container : {
         alignItems:'center',
-        justifyContent:"center"
+        justifyContent:"center",
+        marginTop:30
     }
 })
