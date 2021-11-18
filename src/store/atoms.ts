@@ -2,7 +2,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom, DefaultValue, selector } from 'recoil';
 import { persistentAtom } from 'recoil-persistence/react-native'
-import { wallet } from '../type';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
 interface localForageEffectProps {
     setSelf : Function,
@@ -23,6 +23,25 @@ const localForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffec
             AsyncStorage.removeItem(key);
         } else {
             AsyncStorage.setItem(key, JSON.stringify(newValue));
+            //console.log(`${key} saved Data ${JSON.stringify(newValue)} : ${await AsyncStorage.getItem(key)}`)
+        }
+    });
+};
+
+const localEncryptedForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffectProps) => {
+    const loadPersisted = async () => {
+        const savedValue = await EncryptedStorage.getItem(key);
+        if (savedValue != null) {
+            setSelf(JSON.parse(savedValue));
+        }
+    };
+    loadPersisted();
+
+    onSet(async(newValue: any) => {
+        if (newValue instanceof DefaultValue) {
+            EncryptedStorage.removeItem(key);
+        } else {
+            EncryptedStorage.setItem(key, JSON.stringify(newValue));
             //console.log(`${key} saved Data ${JSON.stringify(newValue)} : ${await AsyncStorage.getItem(key)}`)
         }
     });
@@ -51,7 +70,7 @@ export const walletState = atom<Array<object>>({
     key:'walletState',
     default : new Array<object>(),
     effects_UNSTABLE: [
-        localForageEffect('wallets state')
+        localEncryptedForageEffect('wallets state')
     ]
 })
 
