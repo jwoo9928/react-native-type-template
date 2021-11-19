@@ -91,3 +91,9 @@ export const countInputState = selector({
         return `current count is ${get(countState)}`
     }
 })
+
+export const walletStates = [
+    { key : "textState", value : textState },
+    { key :  "walletState",value : walletState },
+    { key :  "countState", value : countState }
+]

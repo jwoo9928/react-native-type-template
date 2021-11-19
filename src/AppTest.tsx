@@ -6,7 +6,7 @@ import {
   Button,
 } from 'react-native';
 
-
+import EncryptedStorage from 'react-native-encrypted-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface AppTestContainerProps {
@@ -37,6 +37,8 @@ const AppTest = ({setDevForm, setForceLogin} : AppTestContainerProps) => {
         />
         <Button onPress={()=>{
           AsyncStorage.clear().then(() => console.log('All Data cleaned'));
+          EncryptedStorage.clear()
+
         }} title='저장 cache데이타(로그인정보등등..) 삭제' />
       </View>
     </View>
