@@ -14,24 +14,20 @@ interface keyValuePair {
 
 const DebugObserver = ({states} : any) => {
     useRecoilTransactionObserver_UNSTABLE(({ snapshot, previousSnapshot }) => {
-        console.log("%c previous state : ",'color: #bada55',getPreState(previousSnapshot));
-        console.log("%c next state : ",'color: #ff0000 ',getNextState(snapshot));
+        console.group("action Atom")
+        console.log("%c previous state : ",'color: #E6E6FA',getState(previousSnapshot));
+        console.log("%c action","color : #00FFFF",);
+        console.log("%c next state : ",'color: #bada55',getState(snapshot));
     })
 
-    const getPreState = (snapShot : Snapshot) => {
+    const getState = (snapShot : Snapshot) => {
         const preValues: any[] = [];
         states.map((item : keyValuePair) => {
             const result = snapShot.getPromise(item.value).then((result : any) => preValues.push({[item.key] : result}))
         })
         return preValues;
     }
-    const getNextState = (snapShot : Snapshot) => {
-        const nextValues: any[] = [];
-        states.map((item : keyValuePair) => {
-            snapShot.getPromise(item.value).then((result : any) => nextValues.push({[item.key] : result}))
-        })
-        return nextValues
-    }
+   
     return(<></>)
 }
 
