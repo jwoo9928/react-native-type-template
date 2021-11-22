@@ -8724,6 +8724,11 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
+recoil-logger@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/recoil-logger/-/recoil-logger-1.2.0.tgz#845e1a3e1eebaeb9242bdb4a5aec226a36af577c"
+  integrity sha512-RjDLVW0bLiaggTrG+IaPYjK64q27uXUSEeWtfvw15N0DiiaRzsLL1Z9WXxE9eDtg8L+hnjJSU84hIVOS1e2LVQ==
+
 recoil-persistence@^0.2.6:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/recoil-persistence/-/recoil-persistence-0.2.6.tgz#58ed04b3ac17d6f329cafebaf821c2b21bca4fe7"

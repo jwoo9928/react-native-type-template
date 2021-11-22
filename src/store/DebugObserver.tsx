@@ -16,7 +16,7 @@ const DebugObserver = ({states} : any) => {
     useRecoilTransactionObserver_UNSTABLE(({ snapshot, previousSnapshot }) => {
         console.group("action Atom")
         console.log("%c previous state : ",'color: #E6E6FA',getState(previousSnapshot));
-        console.log("%c action","color : #00FFFF",);
+        console.log("%c action","color : #00FFFF",changedState(snapshot));
         console.log("%c next state : ",'color: #bada55',getState(snapshot));
     })
 
@@ -26,6 +26,18 @@ const DebugObserver = ({states} : any) => {
             const result = snapShot.getPromise(item.value).then((result : any) => preValues.push({[item.key] : result}))
         })
         return preValues;
+    }
+
+    const changedState = (snapShot : Snapshot) => {
+        let result = {};
+        states.map((item : keyValuePair) => {
+            //console.log(`key : ${item.key} :`,snapShot.getInfo_UNSTABLE(item.value).loadable)
+            let snapshotInfo = snapShot.getInfo_UNSTABLE(item.value);
+            if (snapshotInfo.isModified) {
+                result = {[item.key]: snapshotInfo.loadable?.contents}
+            }
+        })
+        return result
     }
    
     return(<></>)
