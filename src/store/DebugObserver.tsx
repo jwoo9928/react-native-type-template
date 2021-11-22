@@ -1,4 +1,5 @@
 import { RecoilState, Snapshot, useRecoilTransactionObserver_UNSTABLE } from 'recoil';
+import React, { useEffect, useMemo, useState } from 'react';
 
 interface observerProps {
     states: (RecoilState<string> | RecoilState<object[]> | RecoilState<number>)[]
@@ -19,19 +20,19 @@ const DebugObserver = ({ states }: any) => {
     })
 
     const getState = (snapShot: Snapshot) => {
-        const preValues: any[] = [];
+        const values: any[] = [];
         states.map((item: keyValuePair) => {
-            snapShot.getPromise(item.value).then((result: any) => preValues.push({ [item.key]: result }))
+            snapShot.getPromise(item.value).then((result: any) => values.push({ [item.key]: result }));
         })
-        return preValues;
+        return values;
     }
 
     const changedState = (snapShot: Snapshot) => {
-        let result = {};
+        let result : any[] = [];
         states.map((item: keyValuePair) => {
             let snapshotInfo = snapShot.getInfo_UNSTABLE(item.value);
             if (snapshotInfo.isModified) {
-                result = { [item.key]: snapshotInfo.loadable?.contents }
+                result.push({ [item.key]: snapshotInfo.loadable?.contents })
             }
         })
         return result;

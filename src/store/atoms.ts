@@ -23,7 +23,6 @@ const localForageEffect = (key: string) => ({ setSelf, onSet }: localForageEffec
             AsyncStorage.removeItem(key);
         } else {
             AsyncStorage.setItem(key, JSON.stringify(newValue));
-            //console.log(`${key} saved Data ${JSON.stringify(newValue)} : ${await AsyncStorage.getItem(key)}`)
         }
     });
 };
@@ -42,7 +41,6 @@ const localEncryptedForageEffect = (key: string) => ({ setSelf, onSet }: localFo
             EncryptedStorage.removeItem(key);
         } else {
             EncryptedStorage.setItem(key, JSON.stringify(newValue));
-            //console.log(`${key} saved Data ${JSON.stringify(newValue)} : ${await AsyncStorage.getItem(key)}`)
         }
     });
 };
